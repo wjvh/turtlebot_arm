@@ -38,7 +38,7 @@ from copy import deepcopy
 GROUP_NAME_ARM = 'arm'
 GROUP_NAME_GRIPPER = 'gripper'
 
-GRIPPER_FRAME = 'gripper_active_link'
+GRIPPER_FRAME = 'gripper_link'
 
 GRIPPER_OPENED = [0.053]
 GRIPPER_CLOSED = [0.001]
@@ -49,7 +49,7 @@ GRIPPER_JOINT_NAMES = ['gripper_joint']
 
 GRIPPER_EFFORT = [1.0]
 
-REFERENCE_FRAME = '/plate_top_link'
+REFERENCE_FRAME = '/base_link'
 
 class MoveItDemo:
     def __init__(self):

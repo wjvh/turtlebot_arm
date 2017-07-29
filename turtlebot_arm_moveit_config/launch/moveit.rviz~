@@ -209,10 +209,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          <!-- gripper_link:
+          gripper_link:
             Alpha: 1
             Show Axes: false
-            Show Trail: false -->
+            Show Trail: false
           gripper_servo_link:
             Alpha: 1
             Show Axes: false
@@ -646,10 +646,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          <!-- gripper_link:
+          gripper_link:
             Alpha: 1
             Show Axes: false
-            Show Trail: false -->
+            Show Trail: false
           gripper_servo_link:
             Alpha: 1
             Show Axes: false
