@@ -25,6 +25,6 @@
                     pincher_gripper="false" turtlebot_gripper="true">               
       <!-- Place the "floating" arm at the location it should be if mounted on a turtlebot,
            as pick and place and other demos assume this location -->
-      <origin xyz="0.1 0.03 0.435"/>
+      <origin xyz="0.1 0 0.02" rpy="0 0 -1.57075"/>
     </turtlebot_arm>
 </robot>
