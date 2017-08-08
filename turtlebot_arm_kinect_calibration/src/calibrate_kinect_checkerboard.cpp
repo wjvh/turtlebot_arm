@@ -151,7 +151,7 @@ public:
     transform_.matrix().topLeftCorner<3, 3>() = Quaternionf().setIdentity().toRotationMatrix();
 
     // Create subscriptions
-    info_sub_ = nh_.subscribe("/camera1/rgb/camera_info", 1, &CalibrateKinectCheckerboard::infoCallback, this);
+    info_sub_ = nh_.subscribe("/camera/rgb/camera_info", 1, &CalibrateKinectCheckerboard::infoCallback, this);
 
     // Also publishers
     pub_ = it_.advertise("calibration_pattern_out", 1);
@@ -182,7 +182,7 @@ public:
     pattern_detector_.setCameraMatrices(cam_model_.intrinsicMatrix(), cam_model_.distortionCoeffs());
 
     calibrated = true;
-    image_sub_ = nh_.subscribe("/camera1/rgb/image_raw", 1, &CalibrateKinectCheckerboard::imageCallback, this);
+    image_sub_ = nh_.subscribe("/camera/rgb/image_raw", 1, &CalibrateKinectCheckerboard::imageCallback, this);
 
     ROS_INFO("[calibrate] Got image info!");
   }

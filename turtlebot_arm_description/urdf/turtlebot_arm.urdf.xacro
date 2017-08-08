@@ -14,17 +14,21 @@
     <xacro:property name="wrist_llimit" value="-1.745"/>
     <xacro:property name="wrist_ulimit" value="1.745"/>
 
+    <xacro:macro params="parent">
+ 
     <!-- Included URDF Files -->   
     <xacro:include filename="$(find turtlebot_arm_description)/urdf/turtlebot_arm.xacro"/>
 
     <!-- As we don't have here a turtlebot base, add a base_link link as its location reference -->
-    <link name="plate_top_link"/>
+    <!-- link name="base_link"/ -->
 
     <!-- Turtlebot arm macro -->
-    <turtlebot_arm parent="plate_top_link" color="Gray" gripper_color="Gray"
+    <turtlebot_arm parent="${parent}" color="Gray" gripper_color="Gray"
                     pincher_gripper="false" turtlebot_gripper="true">               
       <!-- Place the "floating" arm at the location it should be if mounted on a turtlebot,
            as pick and place and other demos assume this location -->
       <origin xyz="0.1 0 0.02" rpy="0 0 -1.57075"/>
     </turtlebot_arm>
+
+    </xacro:macro>
 </robot>

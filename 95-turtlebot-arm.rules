@@ -1,0 +1,8 @@
+#
+# Example USB assignment - Replace with Arbotix serial number
+# The modified file should be placed into /etc/udev/rules.d/
+# Allows the arm to be referred to as /dev/arbotix
+#
+SUBSYSTEM=="tty", ATTRS(idVendor}=="0403", ATTRS{idProduct)=="6001", 
+ATTRS(serial)=="A504EAZQ",
+SYMLINK+="arbotix"

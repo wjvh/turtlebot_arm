@@ -1,4 +1,4 @@
-port: /dev/ttyUSB2
+port: /dev/ttyUSB1
 read_rate: 15
 write_rate: 25
 joints: {
