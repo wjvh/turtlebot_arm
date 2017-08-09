@@ -23,6 +23,15 @@
   <!-- As we don't have here a turtlebot base, add a base_link link as its location reference -->
   <!-- link name="base_link"/ -->
   <!-- Turtlebot arm macro -->
+  <link name="plate_top_link"/>
+  <joint name="wheel_left_joint" type="fixed">
+    <parent link="plate_top_link"/>
+    <child link="arm_base_link"/>
+  </joint>
+  <joint name="wheel_right_joint" type="fixed">
+    <parent link="plate_top_link"/>
+    <child link="arm_base_link"/>
+  </joint>
   <link name="arm_base_link"/>
   <joint name="arm_base_joint" type="fixed">
     <origin xyz="0.1 0.03 0.435"/>

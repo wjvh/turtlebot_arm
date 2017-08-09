@@ -23,11 +23,12 @@
     <!-- link name="base_link"/ -->
 
     <!-- Turtlebot arm macro -->
-    <turtlebot_arm parent="${parent}" color="Gray" gripper_color="Gray"
+    <turtlebot_arm parent="plate_top_link" color="Gray" gripper_color="Gray"
                     pincher_gripper="false" turtlebot_gripper="true">               
       <!-- Place the "floating" arm at the location it should be if mounted on a turtlebot,
            as pick and place and other demos assume this location -->
       <origin xyz="0.1 0 0.02" rpy="0 0 -1.57075"/>
     </turtlebot_arm>
+
     </xacro:macro>
 </robot>
