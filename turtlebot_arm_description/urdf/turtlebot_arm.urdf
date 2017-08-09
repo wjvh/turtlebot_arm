@@ -24,28 +24,20 @@
   <!-- link name="base_link"/ -->
   <!-- Turtlebot arm macro -->
   <link name="plate_top_link"/>
-  <joint name="wheel_left_joint" type="fixed">
-    <parent link="plate_top_link"/>
-    <child link="arm_base_link"/>
-  </joint>
-  <joint name="wheel_right_joint" type="fixed">
-    <parent link="plate_top_link"/>
-    <child link="arm_base_link"/>
-  </joint>
   <link name="arm_base_link"/>
   <joint name="arm_base_joint" type="fixed">
     <origin xyz="0.1 0.03 0.435"/>
     <parent link="plate_top_link"/>
     <child link="arm_base_link"/>
   </joint>
-  <!-- link name="gripper_link"/>
+  <link name="gripper_link"/>
   <joint name="gripper_link_joint" type="revolute">
     <origin rpy="0 -1.57 0" xyz="0 0 0.112"/>
     <parent link="arm_wrist_flex_link"/>
     <child link="gripper_link"/>
     <limit effort="30" lower="-3.14" upper="3.14" velocity="1"/>
     <axis xyz="1 0 0"/>
-  </joint -->
+  </joint>
   <joint name="arm_shoulder_pan_servo_joint" type="fixed">
     <origin rpy="1.570795 0 1.570795" xyz="0 0 0"/>
     <parent link="arm_base_link"/>
